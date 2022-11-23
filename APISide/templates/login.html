@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+</head>
+<body>
+
+	<content style="display: flex; flex-direction: column;">
+		<h1>Login</h1>
+		<div>
+			<form action="/mock-oauth2/default/v1/authorize/login" method="POST">
+				<div style="display:flex; flex-direction: column; margin: 0px 90px;">
+					<input type="hidden" name="state" value="{{state}}">
+					<input type="hidden" name="redirect_to" value="{{redirect_to}}">
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username" placeholder="User"/>
+					<label for="pass">Password</label>
+					<input type="password" id="pass" name="pass" placeholder="password"/>
+					<input type="submit" value="Login"/>
+				</div>
+			</form>
+		</div>
+	</content>
+
+</body>
+</html>
